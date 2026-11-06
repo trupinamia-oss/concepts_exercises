@@ -26,6 +26,13 @@
 //   sumOfEvens([1, 2, 3, 4]) -> 6
 // ---------------------------------------------------------------------
 function sumOfEvens(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            sum += numbers[i];
+        }
+    }
+    return sum;
 }
 
 
@@ -37,6 +44,26 @@ function sumOfEvens(numbers) {
 //   dayName(3) -> "Wednesday"
 // ---------------------------------------------------------------------
 function dayName(dayNumber) {
+    let name = "";
+    switch (dayNumber) {
+        case 1:
+            name  "Monday";
+        case 2:
+           name "Tuesday";
+        case 3:
+            name "Wednesday";
+        case 4:
+            name "Thursday";
+        case 5:
+            name "Friday";
+        case 6:
+            name "Saturday";
+        case 7:
+            name "Sunday";
+        default:
+            name"Invalid";
+    }
+    return name; 
 }
 
 
