@@ -180,6 +180,16 @@ return result;
 //   countWeekendDays([1, 6, 7, 3]) -> 2
 // ---------------------------------------------------------------------
 function countWeekendDays(dayNumbers) {
+
+    let count = 0;
+    for (let i = 0; i < dayNumbers.length; i++) {
+        const day = dayName(dayNumbers[i]);
+        if (day === "Saturday" || day === "Sunday") {
+            count++;
+        }
+    }
+    return count;
+
 }
 
 
