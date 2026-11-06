@@ -47,21 +47,28 @@ function dayName(dayNumber) {
     let name = "";
     switch (dayNumber) {
         case 1:
-            name  "Monday";
+            name="Monday";
+            break;
         case 2:
-           name "Tuesday";
+           name = "Tuesday";
+            break;
         case 3:
-            name "Wednesday";
+            name = "Wednesday";
+            break;
         case 4:
-            name "Thursday";
+            name = "Thursday";
+            break;
         case 5:
-            name "Friday";
+            name= "Friday";
+            break;
         case 6:
-            name "Saturday";
+            name = "Saturday";
+            break;
         case 7:
-            name "Sunday";
+            name = "Sunday";
+            break;
         default:
-            name"Invalid";
+            name="Invalid";
     }
     return name; 
 }
@@ -75,8 +82,22 @@ function dayName(dayNumber) {
 //   countVowels("Hello World") -> 3
 // ---------------------------------------------------------------------
 function countVowels(text) {
+    let count = 0;
+    for (let i = 0; i < text.length; i++) {
+        switch (text[i].toLowerCase()) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                count = count + 1;
+                break;
+        default:
+            }
+            
 }
-
+return count;
+}
 
 // ---------------------------------------------------------------------
 // Exercise 4: fizzBuzz
