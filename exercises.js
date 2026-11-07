@@ -386,6 +386,28 @@ function wordStatistics(sentence) {
     let longestWord = "";
     let currentWord = "";
 
+    for (let i = 0; i < sentence.length; i++) {
+        if (sentence[i] !== " ") {
+            currentWord = currentWord + sentence[i];
+        } else {
+            if (currentWord !== "") {
+                wordCount++;
+                if (currentWord.length > longestWord.length) {
+                    longestWord = currentWord;
+                }
+                currentWord = "";
+            }
+        }
+    }
+    // kann man statt ++ auch wordCount = wordCount + 1 schreiben, ist aber länger
+    if (currentWord !== "") {
+        wordCount++;
+        if (currentWord.length > longestWord.length) {
+            longestWord = currentWord;
+        }
+    }
+
+    return { wordCount, longestWord };
 }
 
 
