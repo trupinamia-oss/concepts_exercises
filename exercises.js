@@ -323,6 +323,16 @@ function namesAtLeastAge(people, minAge) {
 //   cartTotal([{ item: "Pen", price: 2, quantity: 10 }]) -> 18
 // ---------------------------------------------------------------------
 function cartTotal(cart) {
+    let total = 0;
+    for (let i = 0; i < cart.length; i++) {
+        const item = cart[i];
+        let itemTotal = item.price * item.quantity;
+        if (item.quantity >= 10) {
+            itemTotal *= 0.9; 
+        }
+        total += itemTotal;
+    }
+    return total;
 }
 
 
@@ -333,6 +343,13 @@ function cartTotal(cart) {
 //   isPrime(7) -> true,  isPrime(9) -> false
 // ---------------------------------------------------------------------
 function isPrime(n) {
+    if (n < 2) return false;
+    let i = 2;
+    while (i * i <= n) {
+        if (n % i === 0) return false;
+        i++;
+    }
+    return true;
 }
 
 
@@ -343,8 +360,15 @@ function isPrime(n) {
 //   primesUpTo(10) -> [2, 3, 5, 7]
 // ---------------------------------------------------------------------
 function primesUpTo(n) {
-}
+const primes = [];
+for (let number = 2; number <= n; number++) {
+    if (isPrime(number)) {
+        primes.push(number);
+    }
 
+}
+return primes;
+}
 
 // ---------------------------------------------------------------------
 // Exercise 16: wordStatistics
