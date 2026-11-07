@@ -381,6 +381,11 @@ return primes;
 //     -> { wordCount: 4, longestWord: "quick" }
 // ---------------------------------------------------------------------
 function wordStatistics(sentence) {
+
+    let wordCount = 0;
+    let longestWord = "";
+    let currentWord = "";
+
 }
 
 
